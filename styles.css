@@ -1,0 +1,274 @@
+/* Navbar */
+.navbar {
+  margin-bottom: 20px;
+  background-color: #264653 !important ; /* Update the color to a premium shade */
+  color: #160f0f !important; /* Set text color to white for contrast */
+  padding: 5px; /* Add padding for spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Adjust the font size for a modern look */
+  font-weight: bold; /* Make the brand text bold */
+}
+
+.nav-link {
+  font-size: 18px; /* Adjust the font size for menu links */
+  margin-right: 10px; /* Add some spacing between menu items */
+  text-transform: uppercase; /* Convert menu item text to uppercase */
+}
+
+.nav-link:hover {
+  color: #eee; /* Change the link color on hover */
+}
+
+/* Search bar */
+.search-container {
+  margin-bottom: 0px;
+  color: #ffffff;
+  padding: 2rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 400px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to right, #13a1da, #550d0d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  transition: width 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  color: #264653;
+  width: 600px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #264653;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.search-container button:hover {
+  background-color: #0d2c35;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.magnifying-glass-icon {
+  width: 46px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  padding: 40px 0;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer .row {
+  margin-bottom: 20px;
+}
+
+.footer .col {
+  display: flex;
+  justify-content: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.bottom-footer {
+  text-align: center;
+  padding-top: 20px;
+  color: #999;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 10%;
+  left: 30px;
+  width: 314px;
+  height: 12px;
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.dark-mode-toggle label {
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle label::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle input:checked + label::after {
+  transform: translateX(20px);
+}
+
+.dark-mode {
+  background-color: #000;
+  color: #fff !important;
+  transition: background-color 0.7s ease, color 1.3s ease;
+}
+
+/* Add a subtle gradient to the background */
+.dark-mode::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.dark-mode.active::before {
+  opacity: 1;
+}
+
+.weather-info {
+  font-size: 24px;
+  font-weight: bold;
+  color: #253a47;
+  background-color: #f1faee;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.weather-info:hover {
+  background-color: #47ecbb;
+  color: #224d5a;
+}
+
+.weather-info span.city-name {
+  color: #ff5722; /* Set the color to a different color of your choice */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.weather-info span.weather-description {
+  color: #264653;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-info span.temperature {
+  color: #264653;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.weather-info span.temperature::after {
+  content: "°C";
+}
+
+.weather-info img.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* Apply a smooth transition to the background gradient */
+.dark-mode::before {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.dark-mode.active::before {
+  opacity: 1
+}
+
+  .weather-container {
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    border-radius: 8px; /* Add border-radius for a rounded look */
+    padding: 120px; /* Add padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  .current-time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #264653;
+    background-color: #f1faee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .city-name {
+    color: #ff0000; /* Specify the desired color */
+  }
+  

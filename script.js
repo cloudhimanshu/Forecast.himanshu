@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const searchButton = document.getElementById("searchButton");
   const cityInput = document.getElementById("cityInput");
   const svgIcon = document.querySelector(".dark-mode-toggle img");
-  const darkModeElement = document.querySelector(".dark-mode");
+  const darkModeElement = document.querySelector(".dark-mode"); 
   const weatherIcon = document.getElementById("weatherIcon");
-  const twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
 
   // Function to enable dark mode
   function enableDarkMode() {
@@ -52,22 +51,26 @@ document.addEventListener("DOMContentLoaded", function() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     fetch(url)
-      .then(function(response) {
+      .then(function (response) {
         if (!response.ok) {
           throw new Error("Weather data not available");
         }
         return response.json();
       })
-      .then(function(data) {
+      .then(function (data) {
         const temperature = data.main.temp;
         const temperatureCelsius = temperature - 273.15; // Convert temperature to Celsius
-        weatherElement.classList.add('weather-info');
-        weatherElement.innerText = `Weather in: ${data.name}\n${data.weather[0].main}\nTemperature: ${temperatureCelsius.toFixed(2)}°C`;
 
-        // Update Twitter Card title dynamically
-        twitterTitleTag.setAttribute("content", `Weather in ${data.name}`);
+        const weatherDescription = data.weather[0].description;
+        const humidity = data.main.humidity;
+        const windSpeed = data.wind.speed;
+        const visibility = data.visibility;
+        const pressure = data.main.pressure;
+
+        weatherElement.classList.add('weather-info');
+        weatherElement.innerText = `Weather in: ${data.name}\nCondition: ${weatherDescription}\nTemperature: ${temperatureCelsius.toFixed(2)}°C\nHumidity: ${humidity}%\nWind Speed: ${windSpeed} m/s\nVisibility: ${visibility} meters\nPressure: ${pressure} hPa`;
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log("Error:", error);
         weatherElement.innerText = "Failed to fetch weather data";
       });
@@ -85,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
       const currentTime = new Date();
       timeElement.innerText = `Current Time: ${currentTime.toLocaleTimeString()}`;
     }
-
     // Update the time immediately
     updateTime();
 

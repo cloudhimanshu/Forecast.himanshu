@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  getWeatherData("Jalandhar"); // Fetch weather for Chandigarh by default
+  getWeatherData("Jalandhar"); // Fetch weather for Jalandhar by default
   getCurrentTime();
 });
 

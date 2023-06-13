@@ -88,25 +88,27 @@
 
 /* Footer */
 html, body {
-  height: 100%;
+  height: 118%;
 }
 
-body {
-  margin: 10;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
+.wrapper {
   flex: 1;
 }
 
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: black;
   padding: 40px 0;
   color: #fff;
-  width: 100%;
 }
+
+body {
+  margin-bottom: 11rem;
+}
+
 
 .footer .container {
   text-align: center;
@@ -117,7 +119,7 @@ body {
 }
 
 .footer .col {
-  display: sticky;
+  display: flex;
   justify-content: center;
   cursor: pointer;
 }
@@ -238,7 +240,7 @@ body {
 }
 
 .weather-info {
-  font-size: 24px;
+  font-size: 124px;
   font-weight: bold;
   color: #fff!important;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -340,11 +342,6 @@ body {
     margin-top: 10px; /* Add some spacing below the input */
   }
 
-  .footer {
-    padding: 20px 0; /* Reduce the vertical padding */
-    position: relative;
-  }
-
   .dark-mode-toggle {
     bottom: 20px; /* Increase the distance from the bottom */
     left: 20px; /* Adjust the position from the left */
@@ -354,10 +351,6 @@ body {
     padding: 40px; /* Increase the padding for more spacing */
   }
 
-  .current-time {
-    font-size: 20px; /* Reduce the font size */
-    padding: 10px; /* Adjust the padding for smaller size */
-  }
 }
 
 /* Styles for screens up to 480px wide */
@@ -375,8 +368,5 @@ body {
     font-size: 16px; /* Reduce the font size */
   }
 
-  .footer {
-    padding: 120px 0; /* Reduce the vertical padding */
-    position: fixed;
-  }
+
 }

@@ -157,17 +157,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  cityInput.addEventListener('input', function() {
+  cityInput.addEventListener('input', function(event) {
     const inputValue = this.value;
     showSuggestions(inputValue);
   });
-
+  
+  cityInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace' && this.value === '') {
+      suggestionList.style.display = 'none'; // Hide the suggestion box
+    }
+  });
+  
+  cityInput.addEventListener('keyup', function(event) {
+    if (this.value === '') {
+      suggestionList.style.display = 'none'; // Hide the suggestion box
+    }
+  });
+  
   cityInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
       event.preventDefault();
       searchButton.click();
     }
   });
+  
 
   cityInput.addEventListener('input', function() {
     const inputValue = this.value;

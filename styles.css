@@ -2,7 +2,7 @@
 .navbar {
   margin-bottom: 20px;
   background-color: #264653 !important; /* Update the color to a premium shade */
-  color: #160f0f !important; /* Set text color to white for contrast */
+  color: #ffffff !important; /* Set text color to white for contrast */
   padding: 5px; /* Add padding for spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
@@ -35,7 +35,7 @@
 
 .search-container input {
   padding: 10px;
-  max-width: 400px; /* Set a maximum width for the input field */
+  max-width: 400px;
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
@@ -46,6 +46,8 @@
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   transition: width 0.3s ease;
+  caret-color: auto; /* Add this line to use the default cursor color */
+  cursor: text; /* Add this line to set the cursor */
 }
 
 .search-container input:focus {
@@ -104,7 +106,13 @@
 .footer .col {
   display: flex;
   justify-content: center;
+  cursor: pointer; /* Add this line to change cursor to
+
+
+.footer .col span {
+  pointer-events: none; /* Add this line to prevent click events on the text */
 }
+
 
 .footer a {
   color: #fff;
@@ -291,7 +299,7 @@
   color: #187f8d;
   padding: 12px;
   height: 120px;
-  font-size: 114px;
+  font-size: 90px;
   text-align: left; /* Add this line to align the text to the left */
 }
 #cityInput {

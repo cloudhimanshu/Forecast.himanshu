@@ -107,10 +107,19 @@ document.addEventListener('DOMContentLoaded', function() {
           svgIcon.style.fill = ''; // Reset the fill color to default
         }
       })
-      .catch(function(error) {
-        console.log('Error:', error);
-        weatherElement.innerText = 'Failed to fetch weather data';
-      });
+     .catch(function(error) {
+  console.log('Error:', error);
+  if (error.code === 'network_error') {
+    weatherElement.innerText = 'Failed to fetch weather data. Please check your internet connection.';
+  } else if (error.code === 'invalid_api_key') {
+    weatherElement.innerText = 'Invalid API key. Please make sure the API key is correct.';
+  } else if (error.code === 'location_not_found') {
+    weatherElement.innerText = 'Location not found. Please enter a valid location.';
+  } else {
+    weatherElement.innerText = 'Failed to fetch weather data';
+  }
+});
+
   }
 
   function getCurrentTime() {

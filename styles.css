@@ -279,10 +279,10 @@
   border: 1px solid #ccc;
   color: #000;
   border-top: none;
-  max-height: 150px;
+  max-height: 300px;
   overflow-y: auto;
   position: absolute;
-  width: 1300px; /* Same width as the search input */
+  width: 410px; /* Same width as the search input */
   top: calc(100% + 2px); /* Position it right below the search input */
   left: 15rem; /* Align with the left side of the search input */
   z-index: 999; /* Ensure the suggestion list appears above other elements if necessary */

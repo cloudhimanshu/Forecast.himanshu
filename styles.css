@@ -106,12 +106,13 @@
 .footer .col {
   display: flex;
   justify-content: center;
-  cursor: pointer; /* Add this line to change cursor to
-
+  cursor: pointer; /* Add this line to change cursor to pointer */
+}
 
 .footer .col span {
   pointer-events: none; /* Add this line to prevent click events on the text */
 }
+
 
 
 .footer a {
@@ -209,25 +210,20 @@
   color: #fff;
 }
 
-/* Weather Container */
 #weather {
   padding: 20px;
   border-radius: 10px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #294e4b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  color: #fff; /* Change the text color to white */
 }
 
 .weather-info {
   font-size: 24px;
   font-weight: bold;
-  color: #253a47;
-  background-color: #f1faee;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 120px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff!important;
   transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -236,37 +232,10 @@
 }
 
 .weather-info:hover {
-  background-color: #47ecbb;
-  color: #224d5a;
+  background-color: #166967; /* Darken the background color on hover */
+  color: #fff; /* Change the text color to white on hover */
 }
 
-.weather-info span.city-name {
-  color: #ff5722; /* Set the color to a different color of your choice */
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.weather-info span.weather-description {
-  color: #264653;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.weather-info span.temperature {
-  color: #264653;
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.weather-info span.temperature::after {
-  content: "°C";
-}
-
-.weather-info img.weather-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-}
 
 /* Apply a smooth transition to the background gradient */
 .dark-mode::before {
@@ -278,12 +247,6 @@
   opacity: 1
 }
 
-.weather-container {
-  backdrop-filter: blur(10px); /* Apply a blur effect */
-  border-radius: 8px; /* Add border-radius for a rounded look */
-  padding: 120px; /* Add padding for spacing */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-}
 
 .current-time {
   font-size: 24px;

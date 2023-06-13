@@ -290,27 +290,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
   text-align: center;
 }
-
-
-
-
 #suggestionList li {
   padding: 8px 12px;
   cursor: pointer;
 }
-
 #suggestionList li:hover {
   background-color: #e04848;
 }
-
-
 .temperature-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-top: 10px;
 }
-
 .temperature {
   font-size: 68px;
   font-weight: bold;

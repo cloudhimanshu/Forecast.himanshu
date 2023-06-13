@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
   const weatherElement = document.getElementById('weather');
-  const timeElement = document.getElementById('time');
   const darkModeToggle = document.getElementById('darkModeToggle');
   const searchButton = document.getElementById('searchButton');
   const cityInput = document.getElementById('cityInput');
@@ -20,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       element.style.color = 'red'; // Change temperature unit color
     });
     suggestionList.style.backgroundColor = 'black'; // Set suggestion box background color to transparent
-    suggestionList.style.color = 'white'; // Set suggestion box color to
-    
+    suggestionList.style.color = 'white'; // Set suggestion box color to white
   }
 
   // Function to disable dark mode
@@ -98,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="info-item">Visibility: ${visibility} meters</div>
             <div class="info-item">Pressure: ${pressure} hPa</div>
           </div>
+        
         `;
 
         // Change fill color of SVG icon in dark mode
@@ -107,31 +106,18 @@ document.addEventListener('DOMContentLoaded', function() {
           svgIcon.style.fill = ''; // Reset the fill color to default
         }
       })
-     .catch(function(error) {
-  console.log('Error:', error);
-  if (error.code === 'network_error') {
-    weatherElement.innerText = 'Failed to fetch weather data. Please check your internet connection.';
-  } else if (error.code === 'invalid_api_key') {
-    weatherElement.innerText = 'Invalid API key. Please make sure the API key is correct.';
-  } else if (error.code === 'location_not_found') {
-    weatherElement.innerText = 'Location not found. Please enter a valid location.';
-  } else {
-    weatherElement.innerText = 'Failed to fetch weather data';
-  }
-});
-
-  }
-
-  function getCurrentTime() {
-    function updateTime() {
-      const currentTime = new Date();
-      timeElement.innerText = `Current Time: ${currentTime.toLocaleTimeString()}`;
-    }
-    // Update the time immediately
-    updateTime();
-
-    // Update the time every second (1000 milliseconds)
-    setInterval(updateTime, 1000);
+      .catch(function(error) {
+        console.log('Error:', error);
+        if (error.code === 'network_error') {
+          weatherElement.innerText = 'Failed to fetch weather data. Please check your internet connection.';
+        } else if (error.code === 'invalid_api_key') {
+          weatherElement.innerText = 'Invalid API key. Please make sure the API key is correct.';
+        } else if (error.code === 'location_not_found') {
+          weatherElement.innerText = 'Location not found. Please enter a valid location.';
+        } else {
+          weatherElement.innerText = 'Failed to fetch weather data';
+        }
+      });
   }
 
   function showSuggestions(input) {
@@ -173,30 +159,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputValue = this.value;
     showSuggestions(inputValue);
   });
-  
+
   cityInput.addEventListener('keydown', function(event) {
     if (event.key === 'Backspace' && this.value === '') {
       suggestionList.style.display = 'none'; // Hide the suggestion box
     }
   });
-  
+
   cityInput.addEventListener('keyup', function(event) {
     if (this.value === '') {
       suggestionList.style.display = 'none'; // Hide the suggestion box
     }
-  });
-  
-  cityInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      searchButton.click();
-    }
-  });
-  
-
-  cityInput.addEventListener('input', function() {
-    const inputValue = this.value;
-    showSuggestions(inputValue);
   });
 
   cityInput.addEventListener('keypress', function(event) {
@@ -215,5 +188,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   fetchCityNames(); // Fetch city names from the "cities.txt" file
   getWeatherData('Jalandhar'); // Fetch weather for Jalandhar by default
-  getCurrentTime();
 });

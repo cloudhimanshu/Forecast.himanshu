@@ -1,3 +1,4 @@
+
 /* Navbar */
 .navbar {
   margin-bottom: 20px;
@@ -21,6 +22,7 @@
 .nav-link:hover {
   color: #eee; /* Change the link color on hover */
 }
+
 
 /* Search bar */
 .search-container {
@@ -83,16 +85,27 @@
   margin-right: 15px;
 }
 
+
 /* Footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
 .footer {
   background-color: black;
   padding: 40px 0;
   color: #fff;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  transition: transform 0.3s ease; /* Add transition for smooth movement */
 }
 
 .footer .container {
@@ -100,20 +113,18 @@
 }
 
 .footer .row {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .footer .col {
-  display: flex;
+  display: sticky;
   justify-content: center;
-  cursor: pointer; /* Add this line to change cursor to pointer */
+  cursor: pointer;
 }
 
 .footer .col span {
-  pointer-events: none; /* Add this line to prevent click events on the text */
+  pointer-events: none;
 }
-
-
 
 .footer a {
   color: #fff;
@@ -126,6 +137,12 @@
   padding-top: 20px;
   color: #999;
 }
+
+
+body {
+  margin-bottom: 11rem; /* Add margin bottom equal to the footer height */
+}
+
 /* Dark Mode Toggle */
 .dark-mode-toggle {
   position: fixed;
@@ -248,22 +265,15 @@
 }
 
 
-.current-time {
-  font-size: 24px;
-  font-weight: bold;
-  color: #264653;
-  background-color: #f1faee;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
 .city-name {
   color: #187f8d;
   padding: 12px;
   height: 120px;
   font-size: 90px;
   text-align: left; /* Add this line to align the text to the left */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
 }
 #cityInput {
   width: 300px;
@@ -332,6 +342,7 @@
 
   .footer {
     padding: 20px 0; /* Reduce the vertical padding */
+    position: relative;
   }
 
   .dark-mode-toggle {
@@ -364,11 +375,8 @@
     font-size: 16px; /* Reduce the font size */
   }
 
-  .weather-container {
-    padding: 20px; /* Reduce the padding for more compact size */
-  }
-
-  .current-time {
-    font-size: 18px; /* Reduce the font size */
+  .footer {
+    padding: 120px 0; /* Reduce the vertical padding */
+    position: fixed;
   }
 }

@@ -282,12 +282,15 @@
   max-height: 300px;
   overflow-y: auto;
   position: absolute;
-  width: 410px; /* Same width as the search input */
+  width: 100%; /* Occupy the full width of the parent element */
   top: calc(100% + 2px); /* Position it right below the search input */
-  left: 15rem; /* Align with the left side of the search input */
+  transform: translateX(-50%); /* Center the suggestion list horizontally */
+  left: 50%; /* Align with the horizontal center of the search input */
   z-index: 999; /* Ensure the suggestion list appears above other elements if necessary */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  text-align: center;
 }
+
 
 
 
@@ -297,7 +300,7 @@
 }
 
 #suggestionList li:hover {
-  background-color: #e0e0e0;
+  background-color: #e04848;
 }
 
 

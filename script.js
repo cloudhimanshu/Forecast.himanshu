@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     temperatureUnitElements.forEach(function(element) {
       element.style.color = 'red'; // Change temperature unit color
     });
+    suggestionList.style.backgroundColor = 'black'; // Set suggestion box background color to transparent
+    suggestionList.style.color = 'white'; // Set suggestion box color to
+    
   }
 
   // Function to disable dark mode
@@ -205,4 +208,3 @@ document.addEventListener('DOMContentLoaded', function() {
   getWeatherData('Jalandhar'); // Fetch weather for Jalandhar by default
   getCurrentTime();
 });
-

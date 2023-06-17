@@ -1,70 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Worldwide Weather Forecast | Forecaster.Himanshu</title>
-    <meta name="description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
-    <meta name="keywords" content="worldwide weather forecast, global weather, international weather, weather updates, weather news">
-    <meta name="author" content="Forecaster.Himanshu">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="weather.png">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Open Graph Tags (for social media) -->
-    <meta property="og:title" content="Worldwide Weather Forecast | Forecaster.Himanshu">
-    <meta property="og:description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
-    <meta property="og:image" content="https://example.com/images/weather-og-image.jpg">
-    <meta property="og:url" content="https://www.forecasterhimanshu.com">
-    <meta property="og:type" content="website">
-    <meta http-equiv="Content-Language" content="en">
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Worldwide Weather Forecast | Forecaster.Himanshu">
-    <meta name="twitter:description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
-    <meta name="twitter:image" content="https://example.com/images/weather-twitter-image.jpg">
-    <meta name="author" content="Your Name">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="google" content="notranslate">
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.forecasterhimanshu.com">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_TRACKING_ID');
-    </script>
-  </head>
-  
-  
-<body>
+<head>
+  <title>Worldwide Weather Forecast | Forecaster.Himanshu</title>
+  <meta name="description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
+  <meta name="keywords" content="worldwide weather forecast, global weather, international weather, weather updates, weather news">
+  <meta name="author" content="Forecaster.Himanshu">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="weather.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Open Graph Tags (for social media) -->
+  <meta property="og:title" content="Worldwide Weather Forecast | Forecaster.Himanshu">
+  <meta property="og:description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
+  <meta property="og:image" content="https://example.com/images/weather-og-image.jpg">
+  <meta property="og:url" content="https://www.forecasterhimanshu.com">
+  <meta property="og:type" content="website">
+  <meta http-equiv="Content-Language" content="en">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Worldwide Weather Forecast | Forecaster.Himanshu">
+  <meta name="twitter:description" content="Get accurate and up-to-date worldwide weather forecasts on Forecaster.Himanshu. Stay informed about the latest weather conditions across different regions.">
+  <meta name="twitter:image" content="https://example.com/images/weather-twitter-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.forecasterhimanshu.com">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
+</head>
+
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <div class="container">
-        <div class="dark-mode-toggle">
-          <input type="checkbox" id="darkModeToggle" />
-          <label for="darkModeToggle">
-            <img src="toggle.svg" alt="Dark Mode Toggle" />
-          </label>
-        </div>
-
-      <a class="navbar-brand" href="index.html" style="color: white; "><h3>Forcaster.Himanshu</h3></a>
-      <button style="background-color:aliceblue" class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle" />
+        <label for="darkModeToggle">
+          <img src="toggle.svg" alt="Dark Mode Toggle" />
+        </label>
+      </div>
+      <a class="navbar-brand" href="index.html" style="color: white;"><h3>Forecaster.Himanshu</h3></a>
+      <button style="background-color: aliceblue" class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="search-container ">
-        <input type="text" id="cityInput" placeholder="Search for a city"><ul id="suggestionList"></ul></input>
-        
+      <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Search for a city">
+        <ul id="suggestionList"></ul>
         <button id="searchButton">Search</button>
-      </div>      
+      </div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -77,58 +70,39 @@
       </div>
     </div>
   </nav>
-<div class="weather-container">
-    <p class="weather-info">
-    <div class="container">
-    <h1>Today's Weather</h1>
-    <div id="weather"></div>
-    
-  </div></p>
-</div>
-  
 
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="privacy.html">Privacy & Policy</a>
-      </div>
-      <div class="col">
-        <a href="Doc.html">Documentation</a>
-      </div>
-      <div class="col">
-        <a href="#">Our Vision</a>
-      </div>
-      <div class="col">
-        <a href="#">Team</a>
-      </div>
+  <div class="weather-container">
+    <div class="container">
+      <h1>Today's Weather</h1>
+      <div id="weather"></div>
     </div>
   </div>
-  <div class="bottom-footer">
-    <p>&copy; 2023 Weather App. All rights reserved.</p>
-    <p>Developer: Himanshu Kaushik</p>
-  </div>
-</div>
 
-  
-
-  <div class="dark-mode-toggle">
-    <input type="checkbox" id="darkModeToggle" />
-    <label for="darkModeToggle"></label>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="privacy.html">Privacy & Policy</a>
+        </div>
+        <div class="col">
+          <a href="doc.html">Documentation</a>
+        </div>
+        <div class="col">
+          <a href="#">Our Vision</a>
+        </div>
+        <div class="col">
+          <a href="#">Team</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <p>&copy; 2023 Weather App. All rights reserved.</p>
+      <p>Developer: Himanshu Kaushik</p>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js">
+  <script src="script.js"></script>
   </script>
-    <script>
-      function updateTime() {
-        const timeElement = document.getElementById("time");
-        const currentTime = new Date().toLocaleTimeString();
-        timeElement.textContent = currentTime;
-      }
-  
-      // Update the time every second
-      setInterval(updateTime, 1000);
-    </script>
 </body>
 </html>

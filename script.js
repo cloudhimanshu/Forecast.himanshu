@@ -187,5 +187,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   fetchCityNames(); // Fetch city names from the "cities.txt" file
-  getWeatherData('Jalandhar'); // Fetch weather for Jalandhar by default
+  getWeatherData('Mohali'); // Fetch weather for Jalandhar by default
 });

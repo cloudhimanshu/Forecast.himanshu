@@ -14,14 +14,18 @@
   font-weight: bold; /* Make the brand text bold */
 }
 
+
 .nav-link {
   font-size: 18px; /* Adjust the font size for menu links */
   margin-right: 10px; /* Add some spacing between menu items */
-  text-transform: uppercase; /* Convert menu item text to uppercase */
+  
+    color: #f9fffa;
+    text-decoration: solid;
 }
 
 .nav-link:hover {
-  color: #eee; /* Change the link color on hover */
+  color: #00f0f8; /* Change the link color on hover */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -38,12 +42,12 @@
 
 .search-container input {
   padding: 10px;
-  max-width: 400px;
+  max-width: 200px;
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to right, #13a1da, #550d0d);
+  background-image: linear-gradient(to right, #ffffff, #48ff00);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -56,8 +60,11 @@
 .search-container input:focus {
   outline: none;
   color: #16c2b4;
-  max-width: 600px; /* Set a maximum width for the input field */
+  width: 600px; /* Set a larger width for the input field */
+  transition: width 10.3s ease; /* Add transition for smooth animation */
 }
+
+
 
 .search-container button {
   padding: 10px 20px;
@@ -73,6 +80,8 @@
 
 .search-container button:hover {
   background-color: #911621;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .search-container input::placeholder {

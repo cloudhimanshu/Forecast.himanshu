@@ -33,4 +33,5 @@ This app was created by [Your Name].
 The weather data is provided by the OpenWeatherMap API.
 The app uses the Fetch API for making API requests.
 License
+Ready to use
 This project is licensed under the MIT License.

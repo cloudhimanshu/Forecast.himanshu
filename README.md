@@ -6,7 +6,7 @@ Dark mode toggle: Users can switch between light and dark modes to customize the
 City search: Users can enter the name of a city and retrieve the weather information for that location.
 Auto-suggestion: As users type in the city search input, a list of suggested cities will be displayed to assist in selecting the desired location.
 Weather information: The app displays the current temperature, weather description, humidity, wind speed, visibility, and pressure for the selected city.
-Responsive design: The app is designed to work well on different screen sizes, including desktop and mobile devices.
+Responsive design: The app is designed to work well on different screen sizes, including desktop and mobile devices..
 Technologies Used
 HTML: Used for creating the structure and content of the web page.
 CSS: Used for styling the app's layout and elements.
